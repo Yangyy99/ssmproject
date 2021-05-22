@@ -24,5 +24,6 @@
 
     <!--处理静态资源-->
     <mvc:default-servlet-handler/>
-
+    <!--开启aop 动态代理-->
+    <aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy>
 </beans>

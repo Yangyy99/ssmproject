@@ -19,8 +19,8 @@ public class PermissionController {
     private PermissionService permissionService;
 
     @RequestMapping("/findAll.do")
-    public ModelAndView findAll(@RequestParam(name = "page",defaultValue = "1") int page,
-                                @RequestParam(name="size",defaultValue = "4") int size){
+    public ModelAndView findAll(@RequestParam(name = "page",defaultValue = "1") Integer page,
+                                @RequestParam(name="size",defaultValue = "4") Integer size){
         ModelAndView mv=new ModelAndView();
         List<Permission> permissions = permissionService.findAll(page,size);
         PageInfo pageInfo=new PageInfo(permissions);
