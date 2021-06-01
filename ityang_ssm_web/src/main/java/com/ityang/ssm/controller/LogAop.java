@@ -39,10 +39,6 @@ public class LogAop {
     private Date startTime;
 
 
-
-
-
-
     //访问方法 之前
     @Before("execution(* com.ityang.ssm.controller.*.*(..))")
     public void before(JoinPoint jp) throws NoSuchMethodException {
@@ -88,7 +84,6 @@ public class LogAop {
                     url = clazzMappingName + methodAnnotation.value()[0];
                 }
             }
-
             // 执行时间
             Date date = new Date();
             long excuteTime = date.getTime() - startTime.getTime();
